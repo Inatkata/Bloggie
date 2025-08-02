@@ -14,6 +14,7 @@ namespace Bloggie.Web
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             builder.Services.AddScoped<ITagRepository, TagRepository>();
+            builder.Services.AddScoped<IBlogPostRepository, BlogPostRepository>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
